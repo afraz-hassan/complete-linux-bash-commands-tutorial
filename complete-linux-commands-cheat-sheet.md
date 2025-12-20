@@ -100,6 +100,8 @@ Directory that contains temporary files created by system and users. Files under
 
 ## Basic Commands 
 
+```clear``` → it clears the screen
+
 ```#pwd``` → it shows the present working directory 
 
 ```#ls``` → it shows available files and directory list in the present working directory. 
@@ -248,13 +250,125 @@ to recursively delete files in directory **(use sparingly - there is no Recycle 
 For Example:
 ```rm -rvf /home/directory3```
 
-## Displaying the contents of a file on the screen 
+## Displaying the contents of a file on the screen usinf ```cat``` command
 
-clear (clear screen) Before you start the next section, you may like to clear the terminal window of the previous commands so the output of the following commands can be clearly understood. At the prompt, type 
-clear 
-This will clear all text and leave you with the prompt at the top of the window. 
-cat (concatenate) 
-The command cat can be used to display the contents of a file on the screen. Type: 
-cat science.txt 
+###  ```cat``` (concatenate) 
+
+The command cat can be used to display the contents of a file on the screen. Type: ```cat science.txt``` to see the text inside science.txt file. This command shows the entire content of a file on the terminal.
+
+The ```cat``` command can be used for variety of purposes. Such as given below:
+
+### 1. View file content
+**Command:** `cat file.txt`  
+**Description:** Shows everything written inside a file.  
+**Example:** `cat notes.txt`
+
+
+### 2. Create a new file
+**Command:** `cat > file.txt`  
+**Description:** Creates a file and lets you type text into it. But it replaces the old content in file. Overwrites old data.
+**Example:** `cat > todo.txt`  
+Press **CTRL + D** to save.
+
+
+### 3. Append (add) text to a file
+**Command:** `cat >> file.txt`  
+**Description:** Adds new text at the end of the file (does not delete old text).  
+**Example:** `cat >> logs.txt`
+
+### 4. Show two or more files together
+**Command:** `cat file1 file2`  
+**Description:** Shows both files one after another in the terminal.  
+**Example:** `cat a.txt b.txt`
+
+### 5. Merge files into a new file
+**Command:** `cat file1 file2 > newfile.txt`  
+**Description:** Combines two files and saves them into one new file.  
+**Example:** `cat part1.txt part2.txt > final.txt`
+
+
+### 6. Add one file’s content into another
+**Command:** `cat file1 >> file2`  
+**Description:** Adds file1 content at the end of file2.  
+**Example:** `cat intro.txt >> report.txt`
+
+### 7. Show lines with numbers
+**Command:** `cat -n file.txt`  
+**Description:** Adds line numbers to each line in the file.  
+**Example:** `cat -n script.sh`
+
+### 8. Number only non-empty lines
+**Command:** `cat -b file.txt`  
+**Description:** Adds numbers only to lines that are not empty.  
+**Example:** `cat -b notes.txt`
+
+### 9. Remove extra blank lines
+**Command:** `cat -s file.txt`  
+**Description:** Converts many blank lines into a single blank line.  
+**Example:** `cat -s messy.txt`
+
+### 10. Show hidden characters (tabs, line endings)
+**Command:** `cat -A file.txt`  
+**Description:** Shows special characters like tabs and end-of-line markers.  
+**Example:** `cat -A data.txt`
+
+### 12. Read input from keyboard
+**Command:** `cat`  
+**Description:** Prints back everything you type.  
+**Example:**  
+Run: `cat`  
+Type anything → Press **CTRL + D** to stop.
+
+### 13. Read a file using input redirection
+**Command:** `cat < file.txt`  
+**Description:** Another way to read a file (same output as `cat file.txt`).  
+**Example:** `cat < users.txt`
+
+### 14. Copy one file into another
+**Command:** `cat source > target`  
+**Description:** Copies source file content into a new file.  
+**Example:** `cat old.txt > new.txt`
+
+### 15. Show all .txt files together
+**Command:** `cat *.txt`  
+**Description:** Displays all text files in the folder.  
+**Example:** `cat *.log`
+
+### 16. Count lines, words, characters
+**Command:** `cat file.txt | wc`  
+**Description:** Shows line count, word count, and character count.  
+**Example:** `cat story.txt | wc`
+
+
+### 17. View binary files (not readable)
+**Command:** `cat image.png`  
+**Description:** Shows raw binary data (won’t make sense to humans).  
+**Example:** `cat file.bin`
+
+### 18. Show $ at end of each line
+**Command:** `cat -E file.txt`  
+**Description:** Displays a `$` symbol at line endings.  
+**Example:** `cat -E accounts.txt`
+
+### 19. Show tabs as ^I
+**Command:** `cat -T file.txt`  
+**Description:** Shows tab characters clearly.  
+**Example:** `cat -T code.py`
+
+### 20. Show non-printable characters
+**Command:** `cat -v file.txt`  
+**Description:** Displays characters that are normally invisible.  
+**Example:** `cat -v weird.txt`
+
+### 21. Create multiple files at once (rare)
+**Command:** `cat > file1 file2`  
+**Description:** Saves the same typed text into multiple files.  
+**Example:** `cat > copy1 copy2`
+
+### 22. Show file with numbers + symbols
+**Command:** `cat -n -A file.txt`  
+**Description:** Shows both line numbers and hidden characters.  
+**Example:** `cat -n -A notes.txt`
+
 What if the file is longer than the size of the window, so it scrolls past making it unreadable. 
 less The command less writes the contents of a file onto the screen a page at a time. Type less science.txt Press the space bar if you want to see another page, type q if you want to quit reading. As you can see, less is used in preference to cat for long files. University of Leicester | Tutorial Two 8 head The head command writes the first ten lines of a file to the screen. First clear the screen then type head science.txt Then type head -5 science.txt What difference did the -5 do to the head command? tail The tail command writes the last ten lines of a file to the screen. Clear the screen and type tail science.txt How can you view the last 15 lines of the file?
