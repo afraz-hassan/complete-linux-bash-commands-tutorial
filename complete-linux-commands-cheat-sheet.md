@@ -250,7 +250,7 @@ to recursively delete files in directory **(use sparingly - there is no Recycle 
 For Example:
 ```rm -rvf /home/directory3```
 
-## Displaying the contents of a file on the screen usinf ```cat``` command
+## Displaying the contents of a file on the screen
 
 ###  ```cat``` (concatenate) 
 
@@ -370,5 +370,8 @@ Type anything → Press **CTRL + D** to stop.
 **Description:** Shows both line numbers and hidden characters.  
 **Example:** `cat -n -A notes.txt`
 
+## Displaying the contents of a file on the screen usinf ```cat``` command
+
+###  ```cat``` (concatenate) 
 What if the file is longer than the size of the window, so it scrolls past making it unreadable. 
 less The command less writes the contents of a file onto the screen a page at a time. Type less science.txt Press the space bar if you want to see another page, type q if you want to quit reading. As you can see, less is used in preference to cat for long files. University of Leicester | Tutorial Two 8 head The head command writes the first ten lines of a file to the screen. First clear the screen then type head science.txt Then type head -5 science.txt What difference did the -5 do to the head command? tail The tail command writes the last ten lines of a file to the screen. Clear the screen and type tail science.txt How can you view the last 15 lines of the file?
